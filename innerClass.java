@@ -1,13 +1,29 @@
+import java.util.Scanner;
+
 class CPU {
     double price;
     class Processor{ // nested class
     double cores;
-    double catch();
     String manufacturer;
     
+    Processor(String s, double c){
+        manufacturer = s;
+        cores = c;
+    }
     
-    double getCache();
-    void displayProcesorDetail();
+    double getCache(){
+        System.out.println("how many cache do u needed?");
+        double d;
+        Scanner s = new Scanner(System.in);
+        d = s.nextDouble();
+
+        return d;
+    }
+    void displayProcesorDetail(){
+        System.out.println("Cache:"+getCache());
+        System.out.println("Manufacturer:"+manufacturer);
+        System.out.println("cores:"+cores);
+    }
     }
     protected class RAM{ // nested protected class
     // members of protected nested class
@@ -15,7 +31,9 @@ class CPU {
     String manufacturer;
     Double clockSpeed;
     double getClockSpeed();
-    void displayRAMDetail();
+    void displayRAMDetail(){
+
+    }
     }
     }
 
