@@ -16,7 +16,7 @@ class CPU {
         double d;
         Scanner s = new Scanner(System.in);
         d = s.nextDouble();
-
+        s.close();
         return d;
     }
     void displayProcesorDetail(){
@@ -30,7 +30,16 @@ class CPU {
     double memory;
     String manufacturer;
     Double clockSpeed;
-    double getClockSpeed();
+    double getClockSpeed()
+    {
+        System.out.println("how many clock speed do u needed?");
+        double d;
+        Scanner s = new Scanner(System.in);
+        d = s.nextDouble();
+
+        s.close();
+        return d;
+    }
     void displayRAMDetail(){
 
     }
